@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <title>Calculadora do Igrau</title>
+    <link rel="stylesheet" href="Style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .result {
+      margin-top: 10px;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+    <header style="height:90px">     
+  <button style="height:20px;width:10%;background-color:blue" id="Button">
+            <div class="menu-icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </button>
+    <titulo class="titulo"><j>JJk</j><k>_Pro</k><underline>gram</underline>ming</titulo><hr>
+    <nav>
+ <button class="ba" onclick="window.location.href ='paginaprincipal.html';">Pagina Principal</button>      <button class="bu" style="margin-left:10px" onclick="window.location.href ='J.AI.html';">
+       Assistente J.AI</button>
+    </nav>
+  </header>
+   <br>
+  <div id="menu">
+         <div id="menu1" class="menu1">Sistemas
+         </div>
+                <div class="submenu" id="submenu1">Informaticos
+                </div>
+                    <a class="link" href="endereco.html"id="entrada1">Identificador de indereço IP</a>
+                     <a class="link" id="entrada2" href="Conversor.html">Conversor de Sistema de num...</a>
+                      <a class="link" href="Executor.html"id="entrada11">J Visual Code Studio</a>
+                     <a class="link" id="entrada10" href="J.Ai.html"> Assistente J.AI</a>
+                <div class="submenu" id="submenu2">Matemáticos</div>
+                   <a class="link" target="_blank" href="Sistema.html"id="entrada3">Calculadora de sistema de equação</a>
+                     <a class="link" target="_blank" id="entrada4" href="Igrau.html">Calculadora de equaçãa do Iº grau</a>
+                     <a class="link" target="_blank" href="IIgrau.html"id="entrada5">Calculadora de quação do IIºgrau</a>
+                     <a target="_blank" class="link" id="entrada6" href="3grau.html">Calculadora de equação do IIIºgrau</a>
+                      <a target="_blank" class="link" id="entrada7" href="Resto.html">Resto da divisão</a>
+                     <br>
+               <a class="link1" href="Anexos.html">Anexos</a>
+               <br>
+               <div id="menu2" class="menu">Redes sociais
+                </div>
+                    <div class="submenu" id="submenu4">Páginas</div>
+                     <a class="link" target="_blank" id="entrada8" href="https://t.me/jjk_programming">Telegram</a> 
+                     <a class="link" target="_blank" id="entrada9" href="https://whatsapp.com/channel/0029VajHaxOJENy7lWsrA21v">WhatsApp</a>
+                     <a  target="_blank" class="link2" id="submenu5" href="https://t.me /o_que_achas">Comunidade (no Telegram)</a>
+                     <br>
+               <div class="menu" id="menu3">4
+               Apps e ficheiros de apoio
+                </div>
+                   <div class="submenu" id="submenu6">Recomendações<br>(indisponivel no momento)
+        </div>
+   </div>
+   <br>
+   <br>
+   <br>
+  <div class="container">
+    <h1>Resolução de Equações do 1º Grau</h1>
+    <p>
+      Insira os valores para resolver a equação do tipo ax + b = 0.
+    </p>
+    <form id="linearEquationForm">
+      <input type="number" id="inputA" placeholder="Valor de a (coeficiente de x)" required>
+      <input type="number" id="inputB" placeholder="Valor de b (termo independente)" required>
+      <button type="submit">Resolver</button>
+    </form>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    document.getElementById('linearEquationForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Obter os valores de a e b do formulário
+      let a = parseFloat(document.getElementById('inputA').value);
+      let b = parseFloat(document.getElementById('inputB').value);
+
+      // Verificar se os valores de a e b são válidos
+      if (isNaN(a) || isNaN(b)) {
+        document.getElementById('result').innerHTML = '<p>Preencha corretamente os valores de a e b.</p>';
+      } else {
+        // Resolver a equação ax + b = 0
+        if (a === 0) {
+          if (b === 0) {
+            document.getElementById('result').innerHTML = '<p>A equação é uma identidade (0 = 0), tem infinitas soluções.</p>';
+          } else {
+            document.getElementById('result').innerHTML = '<p>A equação é impossível (0 ≠ ' + b + '), não tem solução.</p>';
+          }
+        } else {
+          let x = -b / a;
+          document.getElementById('result').innerHTML = '<p>A solução da equação ' + a + 'x + ' + b + ' = 0 é x = ' + x.toFixed(2) + '.</p>';
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="black">
+  <title>Iniciar secção</title>
+  <link rel="stylesheet" href="Style.css">
+<style>
+form {
+      border-radius: 10px;
+      margin: auto;
+      text-align:left;
+      height: 335px;
+      width: 320px;
+      border-image: 10px;
+      margin: auto;
+      border-color: black;
+      box-shadow: 2px 2px 4px #00002b;
+      margin-bottom: auto;
+      background-color: #ffffff;
+      margin-top:50%;
+    }
+
+    input {
+      height: 30px;
+      text-align: center;
+      width: 250px;
+      border:solid;
+      border-radius:5px;
+      margin-top:10px;
+      margin-left:30.25px;
+    }
+    #numero{
+      display:none;
+      margin-left:30.25px;
+    }
+    #trocar{
+        margin-top:12px;
+        color:#424242;
+        border:none;
+        height:20px;
+        text-align:left;
+        margin-left:30px;
+        font-size:14px;
+    }
+    #saida{
+        margin-top:12px;
+        text-align:left;
+        margin-left:30px;
+        font-size:15px;
+        display:block;
+        border:none;
+        height:30px;
+        background:none;
+        width:80%;
+    }
+    .entrar{
+        margin-top:20px;
+        width:252px;
+        margin-left:33.25px;
+    }
+</style>
+</head>
+<body>
+  <form>
+    <br>
+    <h3>Iniciar secção</h3>
+      <input placeholder="Email" type="email" id="email"required="">
+      <input placeholder="Numero" type="number" id="numero" required="">
+      <div id="trocar" onclick="trocar()" >Mudar email para numero</div>
+      <input placeholder="Senha" type="password" id="senha"required="">
+      <br>
+      <button class="entrar" onclick="analizar()" type="button">Entrar</button>
+      <div id="saida" >
+        Aqui aparecerá o link.
+      </div>
+  </form>
+  <script>
+ var email1=document.getElementById("email");
+ var numero1=document.getElementById("numero");
+ var texto=document.getElementById("trocar");
+ var saida=document.getElementById("saida");
+ function trocar(){
+  if(numero1.style.display==="none" || numero1.style.display===""){
+    numero1.style.display="block";
+    email1.style.display="none";
+    texto.innerHTML="Mudar numero para email";
+  } else {
+    numero1.style.display="none";
+    email1.style.display="block"; 
+    texto.innerHTML="Mudar email para numero";
+  }
+}
+function analizar(){
+  var email = email1.value;
+  var numero = numero1.value;
+  var senha = document.getElementById("senha").value;
+  if((senha === '12345' && email === 'jjk@gmail.com') || (senha === '12345' && numero === '927075935')){
+    saida.innerHTML="<a href='Paginaprincipal.html'>Ir para a pagina principal</a>";
+  } else {
+    saida.style.color="red";
+    saida.innerHTML="Conta não encontrada";
+  }
+}
+  </script>
+</body>
+</html>

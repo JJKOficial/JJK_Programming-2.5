@@ -1,0 +1,107 @@
+<!DOCTYPhtml>
+  <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="Style.css">
+  </head>
+  <body>
+        <header style="height:90px">     
+  <button style="height:20px;width:10%;background-color:blue" id="Button">
+            <div class="menu-icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </button>
+    <titulo class="titulo"><j>JJk</j><k>_Pro</k><underline>gram</underline>ming</titulo><hr>
+    <nav>
+ <button class="ba" onclick="window.location.href ='paginaprincipal.html';">Pagina Principal</button>      <button class="bu" style="margin-left:10px" onclick="window.location.href ='J.AI.html';">
+       Assistente J.AI</button>
+    </nav>
+  </header>
+   <br>
+  <div id="menu">
+         <div id="menu1" class="menu1">Sistemas
+         </div>
+                <div class="submenu" id="submenu1">Informaticos
+                </div>
+                    <a class="link" href="endereco.html"id="entrada1">Identificador de indereço IP</a>
+                     <a class="link" id="entrada2" href="Conversor.html">Conversor de Sistema de num...</a>
+                      <a class="link" href="Executor.html"id="entrada11">J Visual Code Studio</a>
+                     <a class="link" id="entrada10" href="J.Ai.html"> Assistente J.AI</a>
+                <div class="submenu" id="submenu2">Matemáticos</div>
+                   <a class="link" target="_blank" href="Sistema.html"id="entrada3">Calculadora de sistema de equação</a>
+                     <a class="link" target="_blank" id="entrada4" href="Igrau.html">Calculadora de equaçãa do Iº grau</a>
+                     <a class="link" target="_blank" href="IIgrau.html"id="entrada5">Calculadora de quação do IIºgrau</a>
+                     <a target="_blank" class="link" id="entrada6" href="3grau.html">Calculadora de equação do IIIºgrau</a>
+                      <a target="_blank" class="link" id="entrada7" href="Resto.html">Resto da divisão</a>
+                     <br>
+               <a class="link1" href="Anexos.html">Anexos</a>
+               <br>
+               <div id="menu2" class="menu">Redes sociais
+                </div>
+                    <div class="submenu" id="submenu4">Páginas</div>
+                     <a class="link" target="_blank" id="entrada8" href="https://t.me/jjk_programming">Telegram</a> 
+                     <a class="link" target="_blank" id="entrada9" href="https://whatsapp.com/channel/0029VajHaxOJENy7lWsrA21v">WhatsApp</a>
+                     <a  target="_blank" class="link2" id="submenu5" href="https://t.me /o_que_achas">Comunidade (no Telegram)</a>
+                     <br>
+               <div class="menu" id="menu3">4
+               Apps e ficheiros de apoio
+                </div>
+                   <div class="submenu" id="submenu6">Recomendações<br>(indisponivel no momento)
+        </div>
+   </div>
+   <br>
+   <br>
+   <br>
+    <br>
+    <h3 class="h">Calculadora de Equação do IIº grau</h3>
+    <br>
+    <section style="text-align:justify;margin:auto;"class="section">
+      <p>
+        Para o "valor de a", recebe a todo valor antes do x ao quadrado, isto é o valor do quociente de x ao quadrado ou x2, caso for simplesmente x2 coloque 1, nunca coloque 0, pois ai deixa de ser equação do IIº grau.<br><br>
+        Para o "valor de b", recebe todo valor antes do x, isto é o valor do quociente de x, caso for simplesmente x coloque 1, se não houver valor com x, como por exemplo: 2x ; 5x ; 7x..., então coloque 0.<br><br>
+        Para o "valor de c", recebe todo valor que não tenha variavel x, isto é a soma dos termos indenpendentes, se não houver valor sem a variavel x, como por exemplo: 2 ; 5 ; 7..., então coloque 0.<br><br>
+        Caso venha "x1=NaN e x2=NaN" então verifique os passos a passos da Equação e considere apenas o passo antes do passo com NaN, isso devido a impossibilidade de existir a raiz quadrado de um número negativo.
+      </p>
+    </section>
+    <br>
+    <br>
+    <button onclick="Calcular()" style="width:80%;border-radius:5px;" required="" type="radio">Calcular</button>
+    <br>
+
+    <h4>Os Resultados aparecerão abaixo</h4>
+    <section style="margin:auto;text-align:left;"class="section">
+      <l id="g" style="text-align:left;">
+      </l>
+    </section>
+    <hr>
+    <button class="bu" style="width:100%;border-radius:0px;" onclick="Javascript:history.go(-1)">Página anterior</button>
+    <script>
+
+      function Calcular() {
+        var a = parseFloat(prompt("valor de a"));
+        var b = parseFloat(prompt("valor de b"));
+        var c = parseFloat(prompt("valor de c"));
+        let a1 = -4*a*c;
+        let a2 = b*b;
+        let a5 = (-b);
+        let d = parseFloat((b*b)-4*a*c);
+        let delta = Math.sqrt(d);
+        let x1 = parseFloat(((-b)+delta)/2*a);
+        let x2 = parseFloat(((-b)-delta)/2*a);
+        document.getElementById("g").innerHTML = "As raizes da Equação  "+a+"x² + "+b+"x + "+c+" = 0, são: x1 = "+x1+" e x2 = "+x2+" <br><br>Passo a passo:<br>x² + "+b+"x + "+c+" = 0 <br>a=1 ; b="+c+" ;c="+c+"<br>x1= (-("+b+") + √("+b+")²-4(1).("+c+"))/2."+a+"<br>x2= (-("+b+") - √("+b+")²-4(1).("+c+"))/2."+a+"<br> x1=("+a5+" + √ "+a2+" +("+a1+") )/2 <br> x2=("+a5+" - √ "+a2+" +("+a1+") )/2 <br> x1=("+a5+" + √ "+d+" )/2 <br> x2=("+a5+" - √ "+d+" )/2 <br>x1=("+a5+" + "+delta+" )/2 <br>x2= ("+a5+" - "+delta+" )/2 <br> x1= "+x1+" <br>x2= "+x2;
+      }
+      function ba() {
+        alert("Indisponível no momento")
+      }
+      function f() {
+        alert("Para entrares em Contacto connosco basta enviares uma mensagens a um dos nossos canais referidos na secção de sites na pagina principal")
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="black">
+  <title>Página inicial</title>
+  <link rel="stylesheet" href="Style.css">
+<style>
+</style>
+</head>
+<body >
+  <header>     
+  <button style="height:20px;width:10%;background-color:blue" id="Button">
+            <div class="menu-icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </button>
+    <titulo class="titulo"><j>JJk</j><k>_Pro</k><underline>gram</underline>ming</titulo><hr>
+    <nav>
+      <button class="bu" id="selecionar"style="margin-left:10px;">
+       Solicita conta</button><button class="ba" onclick="window.location.href ='entrar.html';">Iniciar Secção</button>
+    </nav>
+  </header>
+  <br>
+  <div id="menu">
+        <p>Tens que Iniciar Secção antes.</p>
+   </div>
+   <div id="saida" style="font-size:18px">
+     <br>
+       <a target="_blank" href="#">Solicitar apartir do Whatsapp</a>
+       <br><br>
+       <a target="_blank" href="#">Solicitar apartir do Telegram</a>
+       <br><br>
+       <a target="_blank" href="#">Solicitar apartir do Facebook</a>
+       <br>
+       <br>
+   </div>
+   <br> <br>
+   <br>
+   <br>
+  <br>
+  <div class="video" >
+    <video id="myVideo" autoplay muted loop>
+      <source src="bv.mp4"  type="video/mp4">
+      Seu navegador não suporta vídeo HTML5.
+    </video>
+    <div class="close-button" onclick="fecharVideo()">
+      fechar
+    </div>
+</div>
+<br>
+<br>
+<p>Tens de iniciar Secção primeiro para teres o conteudo da app</p>
+    <script>
+        document.getElementById('Button').addEventListener('click', function() {var menu= document.getElementById("menu");
+            if (menu.style.display === 'none' || menu.style.display === '') {
+             menu.style.display = 'block';
+             document.querySelector('.video').style.display = 'none';
+            } else {
+             menu.style.display = 'none';
+            }
+        });
+        document.getElementById('selecionar').addEventListener('click', function() {
+            var saida= document.getElementById("saida");
+            if (saida.style.display === 'none' || saida.style.display === '') {
+             saida.style.display = 'block';
+             document.querySelector('.video').style.display = 'none';
+            } else {
+             saida.style.display = 'none';
+            }
+        });
+        function fecharVideo() {
+    var video = document.getElementById('myVideo');
+    video.pause();
+    video.currentTime = 0;
+    video.style.display = 'none';
+    document.querySelector('.video').style.display = 'none';
+  }
+    </script>
+</body>
+</html>
